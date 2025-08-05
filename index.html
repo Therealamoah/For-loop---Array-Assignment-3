@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop & Array</title>
+</head>
+<body>
+    <h1>For Loop & Array</h1>
+    <script>
+        // Number Analyzer
+function numberAnalyzer(numbers) {
+    let largest = numbers[0];
+    let smallest = numbers[0];
+    let sum = 0;
+    // For loop to iterate through the array
+    for (let i = 0; i < numbers.length; i++) {
+        // Finding largest Number
+        if (numbers[i] > largest) {
+            largest = numbers[i];
+        }
+        // Finding smaller Number
+        if (numbers[i] < smallest) {
+            smallest = numbers[i];
+        }
+        // Calculating for sum
+        sum += numbers[i];
+    }
+// Calculating for average
+    let average = sum / numbers.length;
+    console.log("Largest:", largest);
+    console.log("Smallest:", smallest);
+    console.log("Sum:", sum);
+    console.log("Average:", average);
+}
+numberAnalyzer([5, 10, 20, 2, 7]);
+    </script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
