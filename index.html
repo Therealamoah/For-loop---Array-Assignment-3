@@ -43,18 +43,17 @@ number = prompt ("");
    console.log(`${number} x ${i} = ${number * i}`);
 }
 
-// // 3. Even and odd sorter
-// let array = [1, 2, 3, 4, 5, 6];
-// for (let i = 0; i < array.length; i++) {
-//     if (array[i] % 2 === 0) {
-//         console.log(array[i] + " is even");
-//     } else {
-//         console.log(array[i] + " is odd");
-//     }
-// }
-
-// // 4. Shopping Cart System
-//  function y(){
+// 3. Even and odd sorter
+let array = [1, 2, 3, 4, 5, 6];
+for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+        console.log(array[i] + " is even");
+    } else {
+        console.log(array[i] + " is odd");
+    }
+}
+// // 4.Shopping Cart System
+// function y(){
 //     let x = [23,45,12,53];
 
 //     x.push(["milk", "bread", "eggs"]);
@@ -63,6 +62,32 @@ number = prompt ("");
 //  console.log(y());
 
 // 5. Reverse an Array (Manually)
+let arr = [2,9,3,5,4];
+for (let i = 0; i < arr.length / 2; i++) {
+    let temp = arr[i];
+    arr[i] = arr[arr.length - 1 - i];
+    arr[arr.length - 1 - i] = temp;
+}
+console.log(arr);
+
+// FizzBuzz with Arrays
+function FizzBuzz(n) {
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("Fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+    }
+
+}
+FizzBuzz(14);
+
+
 
 
 
