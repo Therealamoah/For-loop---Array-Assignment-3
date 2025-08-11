@@ -70,7 +70,7 @@ for (let i = 0; i < arr.length / 2; i++) {
 }
 console.log(arr);
 
-// FizzBuzz with Arrays
+// 6. FizzBuzz with Arrays
 function FizzBuzz(n) {
     for (let i = 1; i <= n; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
@@ -86,6 +86,52 @@ function FizzBuzz(n) {
 
 }
 FizzBuzz(14);
+
+//  7. Basic Student Grade System
+let scores = [95, 82, 67, 74, 89, 100, 58];
+function studentScores(scores) {
+    let highest = scores[0];
+    let lowest = scores[0];
+    let sum = 0;
+    // For loop to iterate through the scores array
+    for (let i = 0; i < scores.length; i++) {
+        let score = scores[i];
+        // Checking for higest score 
+        if (score > highest) {
+            highest = score;
+        }
+        // Checking for lowest score
+        if (score < lowest) {
+            lowest = score;
+        }
+        // Adding to sum
+        sum += score;
+        // Assigning grades
+        let grade;
+        if (score >= 90) {
+            grade = "A";
+        } else if (score >= 80) {
+            grade = "B";
+        } else if (score >= 70) {
+            grade = "C";
+        } else {
+            grade = "Fail";
+        }
+
+        console.log(`Score: ${score}, Grade: ${grade}`);
+    }
+
+    // Calculating for the average
+    let average = sum / scores.length;
+// console.log
+    console.log("Highest Score:", highest);
+    console.log("Lowest Score:", lowest);
+    console.log("Average Score:", average.toFixed(2)); // 2 decimal places
+}
+// 3. Calling for the function
+studentScores(scores);n   
+
+
 
 
 
