@@ -53,13 +53,27 @@ for (let i = 0; i < array.length; i++) {
     }
 }
 // // 4.Shopping Cart System
-// function y(){
-//     let x = [23,45,12,53];
-
-//     x.push(["milk", "bread", "eggs"]);
-//     return x;
-//  }
-//  console.log(y());
+let products = ["Apple", "Banana", "Orange", "Grapes"];
+let prices = [1.2, 0.5, 0.8, 2.0];
+let cart = [];
+let cartPrices = [];
+function addToCart(items,price) {
+    cart.push (items);
+    cartPrices.push(price);
+}
+function totalPrice() {
+    let total = 0;
+    for (let i = 0; i < cartPrices.length; i++) {
+        total += cartPrices[i];
+    }
+    return total;
+}
+// Adding items to the cart
+addToCart("Apple", 1.2);
+addToCart("Banana", 0.5);
+// Console log the cart and total price
+console.log("Cart:", cart);
+console.log("Total Price:", totalPrice());
 
 // 5. Reverse an Array (Manually)
 let arr = [2,9,3,5,4];
@@ -129,14 +143,57 @@ function studentScores(scores) {
     console.log("Average Score:", average.toFixed(2)); // 2 decimal places
 }
 // 3. Calling for the function
-studentScores(scores);n   
+studentScores(scores);
 
+// 8. Word Counter
+function wordCounter(sentence) {
+    sentence = sentence.toLowerCase();
+    let words = sentence.split(" ");
+    let count = {};
+    for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        if (count[word]) {
+            count[word]++;
+        } else {
+            count[word] = 1;
+        }
+    }
+    return count;
+}
+let results = wordCounter("I'm a student and i am learning JavaScript. I am a student.");
+console.log(results);
 
+// 9. ATM MACHINE SIMULATION
+function atmMachine(balance, withdrawal) {
+    // Loop to check for balance
+    for (let i = 0; i < 1; i++) {
+        if (withdrawal > balance) {
+            balance -= withdrawal;
+            console.log("Withdwal sucessful.");
+            console.log("New Balance: " + balance);
+        } else {
+            console.log ("Error: Insufficient balance.");
+        }
+            
+        }
+    }
+   atmMachine(200, 350);
+   atmMachine(140, 200);
 
+//    10.Password Generator
+function generatePassword(n) {
+    let characters = "A,B,C,D,E,F,G,H,I,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,#,!,%,$,1,2,3,4,5,6";
+    let password = "";
+    for (let i = 0; i < n; i++) {
+        let randomIndex = Math.floor(Math.random() * characters.length);
+        password += characters[randomIndex];
+    }
+    console.log(password);
+    
 
-
-
-
+}
+generatePassword(10);
+   
     </script>
     <script src="index.js"></script>
     
